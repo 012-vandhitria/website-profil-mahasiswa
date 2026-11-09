@@ -327,27 +327,27 @@
         }
 
         .avatar {
-            width: 110px;
-            height: 110px;
+            display: block;
+
+            width: 120px;
+            height: 120px;
 
             margin: 0 auto 18px;
 
+    /* Membuat foto berbentuk lingkaran */
             border-radius: 50%;
-            background: linear-gradient(
-                135deg,
-                #d8ecff,
-                #a9d2f5
-            );
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    /* Menjaga foto agar tidak gepeng */
+            object-fit: cover;
+            object-position: center;
 
-            font-size: 48px;
-
+    /* Border putih */
             border: 4px solid #ffffff;
 
-            box-shadow: 0 4px 15px rgba(39, 100, 155, 0.15);
+    /* Shadow biru tipis */
+            box-shadow:
+                0 0 0 2px rgba(83, 157, 218, 0.35),
+                0 4px 15px rgba(39, 100, 155, 0.18);
         }
 
         .profile h2 {
@@ -539,7 +539,11 @@
 
         <section class="card profile" id="profil">
 
-            <div class="avatar">🎓</div>
+            <img
+                src="foto-profil.jpg"
+                alt="Foto profil mahasiswa"
+                class="avatar"
+            >
 
             <h2>Evan Andhika Fitrianto</h2>
 
