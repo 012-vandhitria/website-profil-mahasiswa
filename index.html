@@ -376,6 +376,127 @@
             font-weight: 700;
         }
 
+/* ===================================
+   BAGIAN MINAT DAN HOBI
+=================================== */
+
+.hobby-intro {
+    margin-bottom: 20px;
+}
+
+/* Tata letak tiga kartu hobi */
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 18px;
+}
+
+/* Desain masing-masing kartu */
+
+.hobby-item {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f0f6fc
+    );
+
+    border: 1px solid #dce8f5;
+    border-top: 3px solid #5797d0;
+
+    border-radius: 14px;
+    padding: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(36, 57, 85, 0.05);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efek ketika kursor diarahkan ke kartu */
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(36, 57, 85, 0.12);
+}
+
+/* Ikon hobi */
+
+.hobby-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 12px;
+
+    background: #e1efff;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 29px;
+}
+
+/* Judul hobi */
+
+.hobby-item h3 {
+    color: #174f83;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    margin-bottom: 6px;
+}
+
+/* Kategori hobi */
+
+.hobby-category {
+    display: inline-block;
+
+    background: #e4f0fc;
+    color: #245d93;
+
+    padding: 4px 9px;
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+/* Deskripsi hobi */
+
+.hobby-item p {
+    color: #35445a;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* Tampilan tablet dan smartphone */
+
+@media (max-width: 700px) {
+
+    .hobby-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .hobby-item {
+        padding: 20px;
+    }
+
+}
+
+        
         /* ===================================
    8. BAGIAN KONTAK
 =================================== */
@@ -669,22 +790,79 @@
         </section>
 
 
-        <!-- HOBI -->
+       
+<!-- MINAT DAN HOBI -->
 
-        <section class="card" id="hobi">
+<section class="card" id="hobi">
 
-            <h2>Minat dan Hobi</h2>
+    <h2>Minat dan Hobi</h2>
+
+    <p class="hobby-intro">
+        Beberapa hal yang saya sukai dan menjadi bagian
+        dari aktivitas serta ketertarikan saya di waktu luang.
+    </p>
+
+    <div class="hobby-grid">
+
+        <!-- HOBI 1: BISMANIA -->
+
+        <div class="hobby-item">
+
+            <div class="hobby-icon">🚌</div>
+
+            <h3>BisMania</h3>
+
+            <span class="hobby-category">Bus Enthusiast</span>
 
             <p>
-                Saya memiliki ketertarikan terhadap teknologi
-                informasi, perkembangan internet, dan dunia digital.
+                Memiliki ketertarikan terhadap dunia bus,
+                mulai dari armada, desain, hingga perkembangan
+                transportasi bus.
             </p>
+
+        </div>
+
+
+        <!-- HOBI 2: DIECASTER -->
+
+        <div class="hobby-item">
+
+            <div class="hobby-icon">🚘</div>
+
+            <h3>Diecaster</h3>
+
+            <span class="hobby-category">Miniature Collector</span>
 
             <p>
-                Hobi: [Tuliskan hobi atau kegiatan yang kamu sukai].
+                Menyukai miniatur kendaraan die-cast,
+                mulai dari desain, detail model,
+                hingga aktivitas mengoleksinya.
             </p>
 
-        </section>
+        </div>
+
+
+        <!-- HOBI 3: CHANNA KEEPER -->
+
+        <div class="hobby-item">
+
+            <div class="hobby-icon">🐟</div>
+
+            <h3>Channa Keeper</h3>
+
+            <span class="hobby-category">Fish Keeping</span>
+
+            <p>
+                Memiliki ketertarikan dalam memelihara ikan Channa,
+                memperhatikan karakteristik dan keindahannya,
+                serta menjaga perawatannya.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- KONTAK -->
 
@@ -728,7 +906,7 @@
                 <!-- USERNAME INSTAGRAM -->
 
                 <a
-                    href="https://www.instagram.com/vanditria/"
+                    href="https://www.instagram.com/vandhitria/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="instagram-username"
